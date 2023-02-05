@@ -315,6 +315,7 @@ exports.postLogin=(req,res,next)=>{
     }
 
     User.fetchUserByEmail(email).then(user=>{
+       // console.log(user);
         if(!user)
         {
             let error= new Error("Email is not registered");

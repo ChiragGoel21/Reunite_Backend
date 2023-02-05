@@ -2,7 +2,7 @@ const express= require('express');
 const app=express();
 const http=require('http');
 const bodyParse= require('body-parser');
-const mongoConnect=require('../server/util/database').mongoConnect;
+const mongoConnect=require('./util/database').mongoConnect;
 const path= require('path');
 const socketServer = require('./socketServer');
 app.use(bodyParse.json());
@@ -51,5 +51,5 @@ app.use((error, req, res, next)=>{
 const server=http.createServer(app);
 socketServer.registerSocketServer(server);
 mongoConnect(()=>{
-    server.listen(process.env.PORT || 5000);
+    server.listen(5002);
 })
