@@ -51,5 +51,5 @@ app.use((error, req, res, next)=>{
 const server=http.createServer(app);
 socketServer.registerSocketServer(server);
 mongoConnect(()=>{
-    server.listen(5002);
+    server.listen(process.env.PORT || 5002);
 })
