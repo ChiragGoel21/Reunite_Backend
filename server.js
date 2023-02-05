@@ -14,7 +14,7 @@ app.set('view engine', 'html');
 app.set('view engine', 'ejs');
 app.use('/profile',express.static(path.join(__dirname + '/profileImage')));
 app.use((req,res,next)=>{
-    res.setHeader('Access-Control-Allow-Origin','http://localhost:3000');
+    res.setHeader('Access-Control-Allow-Origin','https://reunite.onrender.com/');
     res.setHeader('Access-Control-Allow-Methods','PUT, GET, POST, DELETE, PATCH, OPTIONS');
     res.setHeader('Access-Control-Allow-Headers','Content-Type , Authorization');
     next();
