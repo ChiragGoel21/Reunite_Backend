@@ -14,7 +14,11 @@ app.set('view engine', 'html');
 app.set('view engine', 'ejs');
 app.use('/profile',express.static(path.join(__dirname + '/profileImage')));
 app.use((req,res,next)=>{
-    res.setHeader('Access-Control-Allow-Origin','*');
+    const allowedOrigins = ['https://reunite.onrender.com', 'https://reunite.onrender.com/auth', 'https://reunite.onrender.com/dashboard'];
+    const origin = req.headers.origin;
+    if (allowedOrigins.includes(origin)) {
+         res.setHeader('Access-Control-Allow-Origin', origin);
+    }
     res.setHeader('Access-Control-Allow-Methods','PUT, GET, POST, DELETE, PATCH, OPTIONS');
     res.setHeader('Access-Control-Allow-Headers','Content-Type , Authorization');
     next();
