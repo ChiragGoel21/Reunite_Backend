@@ -19,8 +19,8 @@ app.use((req,res,next)=>{
     res.setHeader('Access-Control-Allow-Headers','Content-Type , Authorization');
     next();
 })
-const authRoute=require('../server/routes/auth');
-const friendInviteRoute=require('../server/routes/friendInvitation');
+const authRoute=require('./routes/auth');
+const friendInviteRoute=require('./routes/friendInvitation');
 const FriendInvitation = require('./model/friendInvitationModel');
 
 
