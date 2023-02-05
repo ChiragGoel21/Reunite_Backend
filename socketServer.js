@@ -1,4 +1,4 @@
-const authSocket= require('../server/midalewere/auth_socket');
+const authSocket= require('./midalewere/auth_socket');
 const connectionHandler=require('./socketHandler/newConnectionHandler');
 const disconnect=require('./socketHandler/disconnectHandler');
 const serverStore=require('./serverStore');
