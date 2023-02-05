@@ -239,7 +239,7 @@ exports.postRegsitration=(req,res,next)=>{
                                 <div class="myimage"> <img src="https://firebasestorage.googleapis.com/v0/b/reunite-9214d.appspot.com/o/reunite.png?alt=media&token=757d15df-2c0a-4e76-b1ac-56877a6dbfd4" width="200px" height="200px"><br><br></div>
                                 <h4>Thankyou for choosing Virtual Meet. <br>
                                     You've successfully created your account. We're excited to get you started. Please confirm your account by clicking on the button below. </h4><br>
-                                    <a href='http://localhost:5002/auth/verifyEmail/${token}'><div class='btn'>Verify</div></a>
+                                    <a href='https://reuniteserverr.onrender.com/auth/verifyEmail/${token}'><div class='btn'>Verify</div></a>
                             </div>
                         </body>
                         </html>
