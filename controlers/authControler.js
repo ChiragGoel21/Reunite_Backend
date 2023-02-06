@@ -430,7 +430,7 @@ exports.postUpdateProfileImage=(req,res,next)=>{
 exports.verifyEmailPost=(req,res,next)=>{
     const tokenID=req.params.token;
     User.findUserByEmailToken(tokenID).then(result=>{
-        if(result.result)
+        if(result?.result)
         {
            var mailOptions = {
                 from: 'reunite.noreply@gmail.com',
@@ -501,10 +501,7 @@ exports.verifyEmailPost=(req,res,next)=>{
            return res.redirect('https://reunite.onrender.com');
         }
         else{
-            return res.json({
-                status:404,
-                message:'Email is already verified'
-            })
+            return res.status(404).send('<h3 style="text-align:center;"> Your Email is already verified <h3>')
         }
     }).catch(err=>{console.log(err)});
 }
