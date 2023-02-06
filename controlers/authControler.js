@@ -498,7 +498,7 @@ exports.verifyEmailPost=(req,res,next)=>{
                   console.log(error);
                 }
             });
-           return res.redirect('http://localhost:3000/auth');
+           return res.redirect('https://reunite.onrender.com');
         }
         else{
             return res.json({
