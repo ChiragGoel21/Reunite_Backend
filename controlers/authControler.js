@@ -430,7 +430,8 @@ exports.postUpdateProfileImage=(req,res,next)=>{
 exports.verifyEmailPost=(req,res,next)=>{
     const tokenID=req.params.token;
     User.findUserByEmailToken(tokenID).then(result=>{
-        if(result?.result)
+        //console.log(result);
+        if(result!=null && result?.result)
         {
            var mailOptions = {
                 from: 'reunite.noreply@gmail.com',
