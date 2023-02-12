@@ -14,7 +14,7 @@ app.set('view engine', 'html');
 app.set('view engine', 'ejs');
 app.use('/profile',express.static(path.join(__dirname + '/profileImage')));
 app.use((req,res,next)=>{
-    const allowedOrigins = ['https://reunite.onrender.com', 'https://reunite.onrender.com/auth', 'https://reunite.onrender.com/dashboard'];
+    const allowedOrigins = ['https://reunite.onrender.com', 'https://reunite.onrender.com/auth', 'https://reunite.onrender.com/dashboard','http://localhost:3000', 'http://localhost:3000/auth','http://localhost:3000/dashboard'];
     const origin = req.headers.origin;
     if (allowedOrigins.includes(origin)) {
          res.setHeader('Access-Control-Allow-Origin', origin);
